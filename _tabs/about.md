@@ -14,7 +14,7 @@ This is where I share my thoughts and projects.
 - Cloud Penetration testing
 - VAPT
 
-I am Ibrahim Ng`ang`a, a Cloud and Network Practitioner at [Cyart](https://Cyart.io/). I previously apprenticed as an Ethical Hacker and Cloud & Network Security professional at [CyberShujaa](https://cybershujaa.co.ke)
+I am Ibrahim Ng'ang'a, a Cloud and Network Practitioner at [Cyart](https://Cyart.io/). I previously apprenticed as an Ethical Hacker and Cloud & Network Security professional at [CyberShujaa](https://cybershujaa.co.ke)
 
 I graduated from [University of Eastern Africa, Baraton](https://ueab.ac.ke) in Kenya, with a bachelors degree in Networks and Communications.
 
@@ -24,5 +24,3 @@ In my free time, I like biking my way around trails and hiking for my amazement!
 I am best reached through [Linkedin](https://linkedin.com/in/ibrahimnganga/). I am always open to interesting conversations and collaboration. 
 
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
