@@ -1,11 +1,11 @@
 ---
 title: "SQLmap Essentials - HackTheBox"
 date: 2025-07-01 00:00:00 +0300
-categories: [SQLmap Essentials]
-tags: [SQLmap Essentials]
+categories: [SQLMap Essentials]
+tags: [SQLMap Essentials]
 ---
 
-# SQLmap Essentials 
+# SQLMap Essentials 
 
 Hello there, welcome to my first blog of the year. 
 
