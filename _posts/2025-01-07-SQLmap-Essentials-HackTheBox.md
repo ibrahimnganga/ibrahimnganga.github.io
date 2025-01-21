@@ -12,7 +12,7 @@ Hello there, welcome to my first blog of the year.
 
 This lab series is part of the [Bug Bounty Hunter Path](https://academy.hackthebox.com/path/preview/bug-bounty-hunter) of HackTheBox. This module aims to teach you the basics of using SQLMap to discover various types of SQL Injection vulnerabilities, all the way to the advanced enumeration of databases to retrieve all data of interest.
 
-I enjoyed this lab very much. I am running an SQLmap payload on the final skill assessment question which is currently taking too long 🥱 so I thought that I'd have to write this blog.
+While I wait for the final skill assessment payload to get the flag which is taking a little too long I decided to write this walkthrough. It is among the labs I enjoyed much during the Bug Bounty Path.
 
 I hope you enjoy perusing this walkthrough as much as I did writing it.
 
