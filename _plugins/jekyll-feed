@@ -1,3 +1,0 @@
-title: SQLmap Essentials - HackTheBox
-description: This lab series is part of the Bug Bounty Hunter Path of HackTheBox. This module aims to teach you the basics of using SQLMap to discover various types of SQL Injection vulnerabilities, all the way to the advanced enumeration of databases to retrieve all data of interest.
-url: https://ibrahimnganga.github.io
