@@ -75,12 +75,7 @@ analytics:
   fathom:
     id: # fill in your Fathom Site ID
 
-# Page Plugins
-plugins:
-   - jekyll-feed
-   title: Your Blog Title
-   description: Your blog description
-   url: https://ibrahimnganga.github.io
+
 
 
 
