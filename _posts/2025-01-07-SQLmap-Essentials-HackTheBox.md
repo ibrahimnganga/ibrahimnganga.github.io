@@ -29,7 +29,7 @@ We are provided with a target that leads to a page that displays links to the di
 Questions:
 
 
-`1. What's the contents of table flag2? (Case #2)`
+1. `What's the contents of table flag2? (Case #2)`
 
 There is an 'id' parameter that is used to retrive rows of a table from a database. 
 
@@ -54,7 +54,7 @@ From the command:
 
 
 
-`2. What's the contents of table flag3? (Case #3)`
+2. `What's the contents of table flag3? (Case #3)`
 
 The cookie value id is vulnerable.
 
@@ -67,7 +67,7 @@ From the command:
 
 
 
-`3. What's the contents of table flag4? (Case #4) `
+3. `What's the contents of table flag4? (Case #4) `
 
 There is a vulnerability in a JSON value for data: id. 
 
@@ -94,7 +94,7 @@ In this section we will use some of the above-mentioned flags that will dig deep
 
 Questions
 
-`1. What's the contents of table flag5? (Case #5) `
+1. `What's the contents of table flag5? (Case #5) `
 
 This challenges indicaes an OR SQLi vulnerability for the parameter 'id'. For this we will have to use the Level/Risk flags by raising the risk level. This is done because OR payloads are inherently dangerous in a default run, where underlying vulnerable SQL statements are actively modifying the database content. 
 
@@ -117,7 +117,7 @@ From the command:
 
 
 
-`2. What's the contents of table flag6? (Case #6)`
+2. `What's the contents of table flag6? (Case #6)`
 
 The challenge has a vulnerable parameter col. This challenge requires the use of the prefix flag.
 
@@ -129,7 +129,7 @@ From the command:
 
   
 
-`3. What's the contents of table flag7? (Case #7)`
+3. `What's the contents of table flag7? (Case #7)`
 
 The challenge has a vulnerable parameter at id and it is vulnerable using a UNION Query based technique. This means that we have to use the Union flag.
 
@@ -147,7 +147,7 @@ Database enumaration requires the knowledge of how to use flags in your command.
 
 Questions
 
-`1. What's the contents of table flag1 in the testdb database? (Case #1)`
+1. `What's the contents of table flag1 in the testdb database? (Case #1)`
 
 This challenge requires to know the names of the Database containing the table in question and the Database schema type being used
 
@@ -159,7 +159,7 @@ This challenge requires to know the names of the Database containing the table i
 
 Question
 
-`1. What's the name of the column containing "style" in it's name? (Case #1)`
+1. `What's the name of the column containing "style" in it's name? (Case #1)`
 
 After looking into the sqlmap manual page we should now know what flag to use in order to get contents of the 'style' column
 
@@ -171,7 +171,7 @@ From the command:
 
   
 
-`2. What's the Kimberly user's password? (Case #1)`
+2. `What's the Kimberly user's password? (Case #1)`
 
     sqlmap -u 'http://SERVERIP:PORT/case1.php?id=1' --dump --batch --columns -C name,password -T users
 
