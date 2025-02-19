@@ -255,7 +255,24 @@ Questions
 
 1.`What's the contents of table final_flag? `
 
+When we visit the page provided we see this
 
+![Alt Text](../assets/img/SQLMap-Essentials/sqlmap-essentials4.png)
+
+After navigating all pages and links in the website we find a POST Request for an interesting page 
+
+![Alt Text](../assets/img/SQLMap-Essentials/sqlmap-essentials5.png)
+
+So we try and find any payloads to find the final flag
+
+    sqlmap -r reqs.txt -p 'id' --batch --dump -T final_flag --random-agent --no-cast --tamper=between
+
+It takes a while to find the final flag but we have it!
+
+
+
+
+Thank you for taking time to read this, Follow me on my socials provided and join the RSS feed for more updates. 
 
 
 
