@@ -187,7 +187,53 @@ Questions
 
 1. ` What's the contents of table flag8? (Case #8) `
    
-This challenge indicates the need for csrf token. So we open up BurpSuite and capture the token or we can use the web dev tools for that.
+This challenge indicates the need for a token. So we open up BurpSuite and capture the token or we can use the web dev tools for that.
+We capture the request using Burp and we now have our token 
+
+
+ ![Alt Text](../assets/img/SQLMap-Essentials/sqlmap-essentials3.png)
+ 
+
+We save the request to a file to be later used in our command. The website  is providing us with our own cookie it is best we keep it simple and use the original Burpsuite request rather than sqlmap providing us with another different cookie that would mess up the command request.
+
+Notice the name of the token provided,`t0ken`, we should not mistake this while writingour command.
+
+    sqlmap -r reqs.txt -p 'id' --csrf-token="t0ken" --batch -T flag8 --dump --no-cast
+    
+
+2.`What's the contents of table flag9? (Case #9)`
+
+This challenge contains a unique ID so we will use the `--randomize` flag to work around that. 
+
+      sqlmap -u 'http://SERVERIP:PORT/case9.php?id=1&uid=51434972' --batch -T flag9 --dump --no-cast --randomize='uid'
+      
+
+3.` What's the contents of table flag10? (Case #10)`
+
+The challenge seems to ignore any http request sent through sqlmap. So bypass this we will use a random agent.
+
+    sqlmap -r reqs.txt -p 'id' --batch --dump -T flag10 --random-agent --no-cast
+
+
+4.`What's the contents of table flag11? (Case #11) `
+
+This challenge requires the filtering of certain characters. To do this we use the `--tamper` flag.
+
+    sqlmap -u  'http://SERVERIP:PORT/case11.php?id=1' --batch --dump -T flag11 --no-cast --tamper=between 
+
+From this command:
+
+`--tamper=between - Replaces greater than operator (>) with NOT BETWEEN 0 AND # and equals operator (=) with BETWEEN # AND #`
+
+
+
+# OS Exploration
+
+
+    
+
+
+
 
 
 
