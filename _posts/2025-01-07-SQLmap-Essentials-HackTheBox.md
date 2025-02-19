@@ -83,13 +83,13 @@ While it is applicable in this lab, we may also use the following command.
 
 Sqlmap comes right off the bat as a very strong tool, though it is capable to do more with some tuning by using flags that increase the accuracy of your scan. These may include flags for Level/Risk, Status Codes, Text and Techniques etc.
 
-In this section we will use some of the above-mentioned flags that will dig deeper in our scans inorder to achive our goals. Follow me as we do it.
+In this section we will use some of the above-mentioned flags that will dig deeper in our scans to achieve our goals. Follow me as we do it.
 
 Questions
 
 `1. What's the contents of table flag5? (Case #5) `
 
-This challenges indicaes an OR SQLi vulnerability for the parameter 'id'. For this we will have to use the Level/Risk flags by raising the risk level. This is done because OR payloads are inherently dangerous in a default run, where underlying vulnerable SQL statements are actively modifying the database content 
+This challenges indicaes an OR SQLi vulnerability for the parameter 'id'. For this we will have to use the Level/Risk flags by raising the risk level. This is done because OR payloads are inherently dangerous in a default run, where underlying vulnerable SQL statements are actively modifying the database content. 
 
 `sqlmap -u http://83.136.248.62:52853/case5.php?id=1 -T flag5 --no-cast --dump --batch --risk 3 --level 5`
 
@@ -115,7 +115,7 @@ From the command:
 
 `3. What's the contents of table flag7? (Case #7)`
 
-The challenge has a vulnerable parameter at id and it is vulnerable using a UNION Query based technique. This means that we have to use the Technique flag.
+The challenge has a vulnerable parameter at id and it is vulnerable using a UNION Query based technique. This means that we have to use the Union flag.
 
 `sqlmap -u 'http://83.136.248.62:52853/case7.php?id=1' -T flag7 --dump --batch --risk 3 --level 5 --union-col=5`
 
