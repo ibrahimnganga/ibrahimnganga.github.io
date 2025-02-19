@@ -183,6 +183,11 @@ From the command:
 
 # Bypassing Web Application Protections
 
+Questions
+
+1. ` What's the contents of table flag8? (Case #8) `
+   
+This challenge indicates the need for csrf token. So we open up BurpSuite and capture the token or we can use the web dev tools for that.
 
 
 
