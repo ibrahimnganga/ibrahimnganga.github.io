@@ -16,7 +16,6 @@ While I wait for the final skill assessment payload to get the flag which is tak
 
 I hope you enjoy perusing this walkthrough as much as I did writing it.
 
-Also find a cheatsheet of the lab the end of the blog
 
 # Running SQLmap on a HTTP Request
 
