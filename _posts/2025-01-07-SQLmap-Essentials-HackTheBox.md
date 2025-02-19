@@ -42,11 +42,15 @@ This indicates it is a POST request. This might help us in writing the command.
 From the command:
 
 
-`--data - speecifies that the HTTP data provided should be sent in a POST request.
-id=*1 - This is the parameter of interest. The asterisk is a custom injection marker.
---batch - allows the running of the command without any user input.
---dump - displays data from a specified database table
--T - specifies database table.`
+`--data - speecifies that the HTTP data provided should be sent in a POST request.`
+
+`id=*1 - This is the parameter of interest. The asterisk is a custom injection marker.`
+  
+`--batch - allows the running of the command without any user input.`
+
+`--dump - displays data from a specified database table`
+
+`-T - specifies database table.`
 
 
 
@@ -102,9 +106,13 @@ This challenges indicaes an OR SQLi vulnerability for the parameter 'id'. For th
 From the command:
 
   `--no-cast - This flag ensures that you get the correct content.` 
+  
   `--risk - [1-3]  extends the risk of causing problems at the target side (i.e., risk of database entry loss or denial-of-service).`
+  
   `--level - [1-5] extends  boundaries being used, based on their expectancy of success (i.e., the lower the expectancy, the higher the level).`
+  
   `--dbs - The database in question.`
+  
   `--dbms - The underlying Database schema being used.`
 
 
